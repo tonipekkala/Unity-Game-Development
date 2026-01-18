@@ -7,6 +7,10 @@ public class PlayerController : MonoBehaviour
     [SerializeField] SpriteRenderer _characterBody;
     [SerializeField] AudioClip _footstep;
 
+    [SerializeField] GameObject shieldPrefab;
+
+    private GameObject currentShield;
+
     Rigidbody2D _rb;
 
     float _nextFootstepAudio = 0f;
@@ -22,6 +26,23 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         HandlePlayerMovement();
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            ToggleShield();
+        }
+    }
+
+    void ToggleShield()
+    {
+        if (currentShield == null)
+        {
+            currentShield = Instantiate(shieldPrefab, transform.position, Quaternion.identity);
+            currentShield.transform.SetParent(this.transform);
+        }
+        else
+        {
+            Destroy(currentShield);
+        }
     }
 
     private void HandlePlayerMovement()
