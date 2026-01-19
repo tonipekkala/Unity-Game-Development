@@ -33,7 +33,11 @@ public class Enemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        // Only set destination if the agent is actually on a mesh
+        if (_agent.isOnNavMesh)
+        {
+            _agent.SetDestination(_target.transform.position);
+        }
     }
     private void OnDisable()
     {

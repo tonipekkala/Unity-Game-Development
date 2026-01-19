@@ -30,7 +30,7 @@ public class EntityHealth : MonoBehaviour
 
 	public async void Death()
 	{
-		await Task.Delay(3000);
+		await Task.Delay(1000);
 		OnDeath?.Invoke();
 	}
 

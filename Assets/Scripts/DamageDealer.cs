@@ -17,4 +17,15 @@ public class DamageDealer : MonoBehaviour
 			entityhealth.LoseHealth(Time.fixedDeltaTime * _dps);
 		}
 	}
+
+	private void OnTriggerEnter2D(Collider2D other)
+	{
+		// Check if the object entering the bubble has the "Enemy" tag
+		if (other.CompareTag("Player"))
+		{
+
+			Debug.Log("player vaporized!");
+
+		}
+	}
 }

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4873745649619234100}
   - component: {fileID: 6943118028880759924}
   - component: {fileID: 8852405919616009066}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: DamageDealer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -81,7 +81,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d557d2d0585dca54cb50913b456ba1de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DamageDealer
-  _dps: 1
+  _dps: 3
 --- !u!1 &2815161583422365551
 GameObject:
   m_ObjectHideFlags: 0
@@ -201,7 +201,7 @@ Transform:
   m_GameObject: {fileID: 5948738578148341405}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.43025, y: -0.11134, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
